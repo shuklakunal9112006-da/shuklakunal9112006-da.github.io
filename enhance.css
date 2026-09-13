@@ -1,0 +1,145 @@
+/* ==========================================================================
+   enhance.css — bold/motion-heavy layer for shuklakunal9112006-da.github.io
+   Drop this file in your project root and link it AFTER your existing
+   stylesheet in <head>, e.g.:
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="enhance.css">
+   ========================================================================== */
+
+/* ---- Scroll progress bar ------------------------------------------------ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #7dd3fc, #a78bfa, #f472b6);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ---- Cursor glow (desktop only) ----------------------------------------- */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(125, 211, 252, 0.14) 0%, rgba(167, 139, 250, 0.08) 40%, transparent 70%);
+  z-index: 1;
+  mix-blend-mode: screen;
+  will-change: transform;
+  transition: opacity 0.3s ease;
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-glow { display: none; }
+}
+
+/* ---- Generic scroll-reveal ----------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Hero entrance sequence ---------------------------------------------- */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em) rotate(3deg);
+  animation: heroWordIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes heroWordIn {
+  to { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+
+.hero-float {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+/* ---- Magnetic buttons ------------------------------------------------------ */
+.magnetic {
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+/* ---- Tilt cards (projects) ------------------------------------------------- */
+.tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  will-change: transform;
+}
+.tilt:hover {
+  box-shadow: 0 20px 60px -20px rgba(125, 211, 252, 0.35);
+}
+.tilt-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.08), transparent 40%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tilt:hover .tilt-shine {
+  opacity: 1;
+}
+
+/* ---- Animated counters ------------------------------------------------------ */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Active nav link ---------------------------------------------------------- */
+nav a.is-active {
+  position: relative;
+}
+nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(1);
+  transform-origin: left;
+  animation: navUnderline 0.3s ease;
+}
+@keyframes navUnderline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ---- Parallax layers ------------------------------------------------------------ */
+[data-depth] {
+  will-change: transform;
+}
+
+/* ---- Respect reduced motion ------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress,
+  .cursor-glow,
+  .hero-word,
+  .reveal,
+  .magnetic,
+  .tilt,
+  [data-depth] {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
