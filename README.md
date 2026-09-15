@@ -1,17 +1,14 @@
 # Kunal Shukla — Data Analyst Portfolio
 
-Dark black/yellow portfolio theme inspired by the clean visual structure of the reference portfolio, while using Kunal Shukla's own profile, skills, projects and contact information.
+Final GitHub Pages-ready portfolio.
 
-## Upload to GitHub Pages
-Upload these files/folders to the root of:
-`shuklakunal9112006-da.github.io`
+Section order:
+Home → About → Skills → Projects → Experience → Contact
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/profile.jpg`
+Files:
+- index.html
+- style.css
+- script.js
+- profile.jpg
 
-Do not upload the ZIP itself. Extract it first.
-
-## Main sections
-Home, About, Skills, Projects, Experience and Contact.
+Upload all files to the root of the GitHub Pages repository.
