@@ -1,4 +1,23 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kunal Shukla — Data Analyst Portfolio"><meta property="og:title" content="Kunal Shukla | Data Analyst"><title>Kunal Shukla | Data Analyst</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Kunal Shukla — Data Analyst Portfolio"><meta property="og:title" content="Kunal Shukla | Data Analyst"><title>Kunal Shukla | Data Analyst</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+<style>
+.skillsShowcaseSection{padding-top:110px;padding-bottom:120px}
+.skillsShowcaseHead{position:relative;text-align:center;max-width:900px;margin:0 auto 58px;overflow:visible}
+.skillsShowcaseHead small{position:relative;z-index:2;letter-spacing:.14em}
+.skillsShowcaseHead h2{position:relative;z-index:2;margin:10px 0 0;font-size:clamp(3rem,6vw,4.8rem);line-height:1;font-weight:800}
+.skillsShowcaseHead p{position:relative;z-index:2;margin:30px auto 0;max-width:700px;color:rgba(255,255,255,.62);font-size:1.05rem;line-height:1.6}
+.skillsGhost{position:absolute;z-index:1;left:50%;top:8px;transform:translateX(-50%);font-size:clamp(5rem,11vw,8rem);font-weight:900;line-height:1;color:rgba(255,255,255,.065);pointer-events:none;user-select:none}
+.skillsShowcase{max-width:870px;margin:0 auto;display:grid;grid-template-columns:repeat(7,minmax(95px,1fr));gap:20px;justify-content:center}
+.skillBox{min-height:145px;background:rgba(20,20,20,.9);border:1px solid rgba(255,255,255,.035);border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:18px 10px;text-align:center;transition:transform .3s ease,border-color .3s ease,background .3s ease,box-shadow .3s ease}
+.skillBox:hover{transform:translateY(-8px);border-color:rgba(255,193,7,.35);background:rgba(27,27,27,.98);box-shadow:0 16px 35px rgba(0,0,0,.28)}
+.skillBox>img{width:52px;height:52px;object-fit:contain}
+.skillBox b{font-size:.95rem;line-height:1.2;white-space:normal}
+.dualIcons{height:52px;display:flex;align-items:center;justify-content:center;gap:6px}
+.dualIcons img{width:25px;height:25px;object-fit:contain}
+.dualIcons span{font-size:14px;color:rgba(255,255,255,.55)}
+@media(max-width:1000px){.skillsShowcase{grid-template-columns:repeat(4,minmax(120px,1fr));max-width:700px}}
+@media(max-width:650px){.skillsShowcaseSection{padding-top:80px;padding-bottom:80px}.skillsShowcaseHead{margin-bottom:42px}.skillsShowcase{grid-template-columns:repeat(2,minmax(120px,1fr));gap:14px;padding:0 8px}.skillBox{min-height:135px}.skillsShowcaseHead p{font-size:.95rem;padding:0 15px}.skillsGhost{top:16px}}
+</style>
+</head><body>
 <div class="grain"></div><div class="glow"></div>
 <header><a class="logo" href="#home"><b>K</b>Kunal Shukla</a><button class="menu">☰</button><nav><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a></nav></header>
 <main>
@@ -7,7 +26,27 @@
 
 <section id="about" class="section"><div class="head reveal"><small>01 / ABOUT</small><h2>Data with purpose.</h2></div><div class="about"><div class="photo reveal"><img src="profile.jpg" alt="Kunal Shukla professional profile photo"><label>DATA ANALYST ✦</label></div><div class="copy reveal"><p class="lead">I turn raw data into clear stories, actionable insights and practical business decisions.</p><p>I’m Kunal Shukla, a Data Analyst focused on data cleaning, exploratory analysis, SQL and dashboarding. I enjoy finding patterns in datasets and presenting them through intuitive visualizations.</p><div class="info"><div><small>EDUCATION</small><b>BCA — IGNOU</b><span>2025–2028</span></div><div><small>EXPERIENCE</small><b>KultureHire</b><span>Data Analytics Intern · 2026</span></div><div><small>LOCATION</small><b>Faridabad</b><span>Haryana, India</span></div><div><small>FOCUS</small><b>Analytics</b><span>BI · Insights · Visualization</span></div></div></div></div></section>
 
-<section id="skills" class="section"><div class="head reveal"><small>02 / SKILLS</small><h2>My toolkit.</h2></div><div class="skills"><div class="skill reveal"><small>01</small><b>Python</b><span>Analysis & automation</span></div><div class="skill reveal"><small>02</small><b>SQL / MySQL</b><span>Queries & insights</span></div><div class="skill reveal"><small>03</small><b>Power BI</b><span>Interactive dashboards</span></div><div class="skill reveal"><small>04</small><b>Excel</b><span>EDA & reporting</span></div><div class="skill reveal"><small>05</small><b>Tableau</b><span>Data visualization</span></div><div class="skill reveal"><small>06</small><b>Pandas</b><span>Data wrangling</span></div><div class="skill reveal"><small>07</small><b>NumPy</b><span>Numerical analysis</span></div><div class="skill reveal"><small>08</small><b>MongoDB</b><span>Document databases</span></div><div class="skill reveal"><small>09</small><b>Matplotlib</b><span>Charts & plots</span></div><div class="skill reveal"><small>10</small><b>Git & GitHub</b><span>Version control</span></div><div class="skill reveal"><small>11</small><b>Jupyter Notebook</b><span>Analysis workflow</span></div><div class="skill reveal"><small>12</small><b>VS Code</b><span>Development</span></div></div></section>
+<section id="skills" class="section skillsShowcaseSection">
+<div class="skillsShowcaseHead reveal">
+  <small>02 / SKILLS</small>
+  <h2>My Skills</h2>
+  <div class="skillsGhost">Skills</div>
+  <p>A showcase of my technical abilities and the tools I use to turn data into insights.</p>
+</div>
+<div class="skillsShowcase">
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><b>Python</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><b>My SQL</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI"><b>Power BI</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Advanced Excel"><b>Advanced Excel</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas"><b>Pandas</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/numpy/013243" alt="NumPy"><b>NumPy</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/matplotlib/11557C" alt="Matplotlib"><b>Matplotlib</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/seaborn/4C72B0" alt="Seaborn"><b>Seaborn</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"><b>MongoDB</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau"><b>Tableau</b></div>
+  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git and GitHub"><div class="dualIcons"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub"><span>+</span><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"></div><b>Git / GitHub</b></div>
+</div>
+</section>
 
 <section id="projects" class="section"><div class="head reveal"><small>03 / PROJECTS</small><h2>Selected work.</h2></div><div class="projects">
 <article class="project reveal"><div class="art net"><strong>NETFLIX</strong><div class="mini">▂▅▃▇▆▉</div></div><div><small>POWER BI · PYTHON · PANDAS</small><h3>Netflix Content Analytics Dashboard</h3><p>Exploring content trends, genres, ratings and catalogue patterns through an interactive analytics dashboard.</p><a href="https://github.com/shuklakunal9112006-da/Netflix-Content-Analytics" target="_blank">View on GitHub ↗</a></div></article>
