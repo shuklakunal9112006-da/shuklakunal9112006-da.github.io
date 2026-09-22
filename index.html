@@ -6,16 +6,16 @@
 .skillsShowcaseHead h2{position:relative;z-index:2;margin:10px 0 0;font-size:clamp(3rem,6vw,4.8rem);line-height:1;font-weight:800}
 .skillsShowcaseHead p{position:relative;z-index:2;margin:30px auto 0;max-width:700px;color:rgba(255,255,255,.62);font-size:1.05rem;line-height:1.6}
 .skillsGhost{position:absolute;z-index:1;left:50%;top:8px;transform:translateX(-50%);font-size:clamp(5rem,11vw,8rem);font-weight:900;line-height:1;color:rgba(255,255,255,.065);pointer-events:none;user-select:none}
-.skillsShowcase{max-width:870px;margin:0 auto;display:grid;grid-template-columns:repeat(7,minmax(95px,1fr));gap:20px;justify-content:center}
-.skillBox{min-height:145px;background:rgba(20,20,20,.9);border:1px solid rgba(255,255,255,.035);border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:18px 10px;text-align:center;transition:transform .3s ease,border-color .3s ease,background .3s ease,box-shadow .3s ease}
-.skillBox:hover{transform:translateY(-8px);border-color:rgba(255,193,7,.35);background:rgba(27,27,27,.98);box-shadow:0 16px 35px rgba(0,0,0,.28)}
-.skillBox>img{width:52px;height:52px;object-fit:contain}
-.skillBox b{font-size:.95rem;line-height:1.2;white-space:normal}
-.dualIcons{height:52px;display:flex;align-items:center;justify-content:center;gap:6px}
-.dualIcons img{width:25px;height:25px;object-fit:contain}
-.dualIcons span{font-size:14px;color:rgba(255,255,255,.55)}
-@media(max-width:1000px){.skillsShowcase{grid-template-columns:repeat(4,minmax(120px,1fr));max-width:700px}}
-@media(max-width:650px){.skillsShowcaseSection{padding-top:80px;padding-bottom:80px}.skillsShowcaseHead{margin-bottom:42px}.skillsShowcase{grid-template-columns:repeat(2,minmax(120px,1fr));gap:14px;padding:0 8px}.skillBox{min-height:135px}.skillsShowcaseHead p{font-size:.95rem;padding:0 15px}.skillsGhost{top:16px}}
+.skillsShowcase{max-width:850px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.skillBox{width:100px;min-height:145px;background:rgba(20,20,20,.92);border:1px solid rgba(255,255,255,.055);border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:18px 8px;text-align:center;transition:transform .3s ease,border-color .3s ease,background .3s ease,box-shadow .3s ease;box-sizing:border-box}
+.skillBox:hover{transform:translateY(-8px);border-color:rgba(255,193,7,.45);background:rgba(27,27,27,.98);box-shadow:0 16px 35px rgba(0,0,0,.3)}
+.skillLogo{width:54px;height:54px;display:flex;align-items:center;justify-content:center;flex:none}
+.skillLogo svg{width:52px;height:52px;display:block}
+.skillLogo .wordmark{font-weight:900;font-size:15px;letter-spacing:-.8px;line-height:1.02}
+.skillLogo .smallmark{font-weight:900;font-size:12px;line-height:1}
+.skillBox b{font-size:.92rem;line-height:1.18;white-space:normal}
+@media(max-width:1000px){.skillsShowcase{max-width:600px}.skillBox{width:110px}}
+@media(max-width:650px){.skillsShowcaseSection{padding-top:80px;padding-bottom:80px}.skillsShowcaseHead{margin-bottom:42px}.skillsShowcase{gap:14px;padding:0 8px}.skillBox{width:120px;min-height:135px}.skillsShowcaseHead p{font-size:.95rem;padding:0 15px}.skillsGhost{top:16px}}
 </style>
 </head><body>
 <div class="grain"></div><div class="glow"></div>
@@ -34,17 +34,17 @@
   <p>A showcase of my technical abilities and the tools I use to turn data into insights.</p>
 </div>
 <div class="skillsShowcase">
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><b>Python</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><b>My SQL</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/powerbi/F2C811" alt="Power BI"><b>Power BI</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Advanced Excel"><b>Advanced Excel</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas"><b>Pandas</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/numpy/013243" alt="NumPy"><b>NumPy</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/matplotlib/11557C" alt="Matplotlib"><b>Matplotlib</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/seaborn/4C72B0" alt="Seaborn"><b>Seaborn</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB"><b>MongoDB</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau"><b>Tableau</b></div>
-  <div class="skillBox reveal"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git and GitHub"><div class="dualIcons"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub"><span>+</span><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"></div><b>Git / GitHub</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#3776AB" d="M32 4c-14 0-13 6-13 6v8h13v3H14C6 21 4 29 4 32s2 11 10 11h6v-8s0-6 7-6h18s6 0 6-6V16s0-12-13-12h-6zm-7 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/><path fill="#FFD343" d="M32 60c14 0 13-6 13-6v-8H32v-3h18c8 0 10-8 10-11s-2-11-10-11h-6v8s0 6-7 6H19s-6 0-6 6v7s0 12 13 12h6zm7-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></div><b>Python</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="16" rx="22" ry="8" fill="#4479A1"/><path fill="#4479A1" d="M10 16v28c0 5 10 8 22 8s22-3 22-8V16c0 5-10 8-22 8s-22-3-22-8z"/><ellipse cx="32" cy="44" rx="22" ry="8" fill="#2F5F7A"/><text x="32" y="40" text-anchor="middle" fill="white" font-size="11" font-weight="800">SQL</text></svg></div><b>My SQL</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="7" y="32" width="11" height="25" rx="2" fill="#F2C811"/><rect x="23" y="22" width="11" height="35" rx="2" fill="#F2C811"/><rect x="39" y="10" width="11" height="47" rx="2" fill="#F2C811"/><text x="32" y="62" text-anchor="middle" fill="#F2C811" font-size="8" font-weight="900">BI</text></svg></div><b>Power BI</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="7" y="7" width="50" height="50" rx="5" fill="#217346"/><path d="M21 20l8 11 8-11h7L33 36l11 15h-7l-8-12-8 12h-7l11-15L14 20h7z" fill="white"/></svg></div><b>Advanced<br>Excel</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#150458" d="M11 12h42v40H11z"/><path fill="#fff" d="M19 42V22h5v15h9v5H19zm17 0V22h5v20h-5z"/><circle cx="48" cy="18" r="5" fill="#E70488"/></svg></div><b>Pandas</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#013243" d="M32 5l23 13v28L32 59 9 46V18L32 5z"/><path fill="#4D77CF" d="M32 14l15 9-15 9-15-9 15-9zm0 21l15-9v18l-15 9V35z"/><path fill="#fff" d="M17 26l12 7v18l-12-7V26z"/></svg></div><b>NumPy</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="25" fill="#11557C"/><path d="M14 45c8-18 16-25 24-25 6 0 10 4 12 9" fill="none" stroke="white" stroke-width="4"/><path d="M14 49c8-8 16-12 24-12 7 0 11 2 14 5" fill="none" stroke="#F0C419" stroke-width="4"/><circle cx="22" cy="28" r="3" fill="white"/><circle cx="42" cy="22" r="3" fill="white"/></svg></div><b>Matplotlib</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 42c10-18 20-24 31-18 6 3 10 9 13 15" fill="none" stroke="#4C72B0" stroke-width="8" stroke-linecap="round"/><path d="M10 50c12-11 24-14 34-8" fill="none" stroke="#8DB5E3" stroke-width="5" stroke-linecap="round"/><circle cx="21" cy="28" r="5" fill="#4C72B0"/><circle cx="42" cy="24" r="5" fill="#8DB5E3"/></svg></div><b>Seaborn</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="#47A248"/><path fill="white" d="M32 13c8 7 12 13 12 20 0 11-7 18-12 18S20 44 20 33c0-7 4-13 12-20z"/><path d="M32 18v29" stroke="#47A248" stroke-width="3"/></svg></div><b>MongoDB</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="#E97627" d="M32 7l7 13 14 7-14 7-7 13-7-13-14-7 14-7 7-13z"/><circle cx="32" cy="34" r="8" fill="white"/><text x="32" y="38" text-anchor="middle" fill="#E97627" font-size="8" font-weight="900">T</text></svg></div><b>Tableau</b></div>
+  <div class="skillBox reveal"><div class="skillLogo"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="21" cy="32" r="11" fill="#F05032"/><circle cx="43" cy="18" r="8" fill="#F05032"/><circle cx="43" cy="46" r="8" fill="#F05032"/><path d="M27 29L37 21M27 35l10 6" stroke="white" stroke-width="5" stroke-linecap="round"/></svg></div><b>Git /<br>GitHub</b></div>
 </div>
 </section>
 
